@@ -1,0 +1,79 @@
+[custom]
+## direct mode
+rulesets = [
+    # tag, group, type, url, path, interval
+    "Adobe, REJECT, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Adobe.yaml, ./ruleset/Adobe.yaml, 86400",
+    "Apple, Apple, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Apple.yaml, ./ruleset/Apple.yaml, 86400",
+    "Amazon, Amazon, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Amazon.yaml, ./ruleset/Amazon.yaml, 86400",
+    "China, DIRECT, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/China.yaml, ./ruleset/China.yaml, 86400",
+    "DingTalk, DingTalk, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/DingTalk.yaml, ./ruleset/DingTalk.yaml, 86400",
+    "Facebook, Facebook, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Facebook.yaml, ./ruleset/Facebook.yaml, 86400",
+    "GitHub, GitHub, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/GitHub.yaml, ./ruleset/GitHub.yaml, 86400",
+    "Google, Google, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Google.yaml, ./ruleset/Google.yaml, 86400",
+    "Microsoft, Microsoft, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Microsoft.yaml, ./ruleset/Microsoft.yaml, 86400",
+    "Netflix, Netflix, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Netflix.yaml, ./ruleset/Netflix.yaml, 86400",
+    "NetEase, NetEase, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/NetEase.yaml, ./ruleset/NetEase.yaml, 86400",
+    "Spotify, Spotify, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Spotify.yaml, ./ruleset/Spotify.yaml, 86400",
+    "Speedtest, DIRECT, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Speedtest.yaml, ./ruleset/Speedtest.yaml, 86400",
+    "Steam, Steam, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Steam.yaml, ./ruleset/Steam.yaml, 86400",
+    "Telegram, Telegram, http, classical, https://github.com/Semporia/Clash/raw/refs/heads/master/Rule/Telegram.yaml, ./ruleset/Telegram.yaml, 86400",
+    "Twitter, Twitter, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Twitter.yaml, ./ruleset/Twitter.yaml, 86400",
+    "Tencent, Tencent, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Tencent.yaml, ./ruleset/Tencent.yaml, 86400",
+    "TencentVideo, DIRECT, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/TencentVideo.yaml, ./ruleset/TencentVideo.yaml, 86400",
+    "YouTube, YouTube, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/YouTube.yaml, ./ruleset/YouTube.yaml, 86400",
+    "WhatsApp, WhatsApp, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/WhatsApp.yaml, ./ruleset/WhatsApp.yaml, 86400",
+    "WeChat, WeChat, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/WeChat.yaml, ./ruleset/WeChat.yaml, 86400",
+    "PayPal, PayPal, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/PayPal.yaml, ./ruleset/PayPal.yaml, 86400",
+    "Zoom, Zoom, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Zoom.yaml, ./ruleset/Zoom.yaml, 86400",
+    "Proxy, 🌏 Global, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Proxy.yaml, ./ruleset/Proxy.yaml, 86400",
+]
+
+custom_proxy_groups = [
+    #  tag, type(select), proxies, filter, interval...
+    "♻️ Auto`url-test`.*`http://www.gstatic.com/generate_204,300,,50",
+
+    # tag, type(url-test), proxies, filter, interval, 
+    # "HK`url-test`http://www.gstatic.com/generate_204`(港|HK|(?i)Hong)`300,,50", 
+    "JP`url-test`http://www.gstatic.com/generate_204`(日本|东京|JP|(?i)Japan)`300,,50",
+    "TW`url-test`http://www.gstatic.com/generate_204`(台|湾|TW|(?i)Taiwan)`300,,50",
+    "US`url-test`http://www.gstatic.com/generate_204`(美|US|(?i)States|American)`300,,50",
+    "SG`url-test`http://www.gstatic.com/generate_204`(新|坡|SG|(?i)Singapore)`300,,50",
+    "TH`url-test`http://www.gstatic.com/generate_204`(泰国)`300,,50",
+    "AE`url-test`http://www.gstatic.com/generate_204`(阿联酋|迪拜)`300,,50",
+    "TR`url-test`http://www.gstatic.com/generate_204`(土|耳其|TR|(?i)Turkey)`300,,50",
+
+    "🚀 Manual`select`[]direct`.*",
+    "🌏 Global`select`[]♻️ Auto`[]JP`[]TW`[]US`[]SG`[]TH`[]AE`[]TR",
+    "MATCH`select`[]♻️ Auto",
+    
+    "Adobe`select`[]REJECT",
+    ["Apple`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png"],
+    ["Amazon`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Amazon.png"],
+    ["China`select`[]DIRECT","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/DingTalk.png"],
+    ["DingTalk`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Facebook.png"],
+    ["Facebook`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Facebook.png"],
+    ["GitHub`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/GitHub.png"],
+    ["Google`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png"],
+    ["Microsoft`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png"],
+    ["Netflix`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Netflix.png"],
+    ["NetEase`select`[]DIRECT","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/NetEase.png"],
+    ["Spotify`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png"],
+    ["Speedtest`select`[]DIRECT","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png"],
+    ["Steam`select`[]DIRECT","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png"],
+    ["Telegram`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png"],
+    ["Twitter`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png"],
+    ["Tencent`select`[]JP","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png"],
+    ["TencentVideo`select`[]DIRECT","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png"],
+    ["YouTube`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png"],
+    ["WhatsApp`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Whatsapp.png"],
+    ["WeChat`select`[]JP","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/WeChat.png"],
+    ["PayPal`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/PayPal.png"],
+    ["Zoom`select`[]DIRECT","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Zoom.png"],
+]
+exclude_remarks = [
+    "(中国)", "(Google搜二爷翻墙)"
+]
+
+enable_rule_generator=true
+overwrite_original_rules=true
+FINAL="[]DIRECT"

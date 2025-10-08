@@ -1,0 +1,53 @@
+[custom]
+rules = []
+## direct mode
+rulesets = [
+    # tag, group, type, url, path, interval
+    # "Adobe, REJECT, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Adobe.yaml, ./ruleset/Adobe.yaml, 86400",
+    # classical ruleset
+    "Apple, Apple, http, classical, https://raw.githubusercontent.com/Semporia/Clash/refs/heads/master/Rule/Apple.yaml, ./ruleset/Apple.yaml, 86400",
+
+    # domain ruleset
+    "Direct, DIRECT, http, domain, https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt, ./ruleset/direct.yaml, 86400",
+    "Private, DIRECT, http, domain, https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt, ./ruleset/private.yaml, 86400",
+    "GFW, US, http, domain, https://github.com/Loyalsoldier/clash-rules/raw/refs/heads/release/gfw.txt, ./ruleset/gfw.yaml, 86400",
+    "Google, US, http, domain, https://github.com/Loyalsoldier/clash-rules/raw/refs/heads/release/google.txt, ./ruleset/google.yaml, 86400",
+    "Proxy, Proxy, http, domain, https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt, ./ruleset/proxy.yaml, 86400",
+    "TLD-NOT-CN, Proxy, http, domain, https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt, ./ruleset/tld-not-cn.yaml, 86400",
+    
+    # cidr ruleset
+    "CNCIDR, DIRECT, http, ipcidr, https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt, ./ruleset/cncidr.yaml, 86400",
+    "LANCIDR, DIRECT, http, ipcidr, https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt, ./ruleset/lancidr.yaml, 84600",
+    "TelegramCIDR, TelegramCIDR, http, ipcidr, https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt, ./ruleset/telegramcidr.yaml, 86400",
+]
+
+custom_proxy_groups = [
+    #  tag, type(select), proxies, filter, interval...
+    "♻️ Auto`url-test`.*`http://www.gstatic.com/generate_204,300,,50",
+
+    # tag, type(url-test), proxies, filter, interval, 
+    # "HK`url-test`http://www.gstatic.com/generate_204`(港|HK|(?i)Hong)`300,,50", 
+    "JP`url-test`http://www.gstatic.com/generate_204`(日本|东京|JP|(?i)Japan)`300,,50",
+    "TW`url-test`http://www.gstatic.com/generate_204`(台|湾|TW|(?i)Taiwan)`300,,50",
+    "US`url-test`http://www.gstatic.com/generate_204`(美|US|(?i)States|American)`300,,50",
+    "SG`url-test`http://www.gstatic.com/generate_204`(新|坡|SG|(?i)Singapore)`300,,50",
+    "TH`url-test`http://www.gstatic.com/generate_204`(泰国)`300,,50",
+    "AE`url-test`http://www.gstatic.com/generate_204`(阿联酋|迪拜)`300,,50",
+    "TR`url-test`http://www.gstatic.com/generate_204`(土|耳其|TR|(?i)Turkey)`300,,50",
+
+    "🚀 Manual`select`[]direct`.*",
+    "Proxy`select`[]♻️ Auto`[]US`[]JP`[]SG",
+    "MATCH`select`[]♻️ Auto",
+    
+    "Adobe`select`[]REJECT",
+    ["Apple`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png"],
+    ["Google`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png"],
+    ["TelegramCIDR`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png"],
+]
+exclude_remarks = [
+    "(中国)", "(Google搜二爷翻墙)"
+]
+
+enable_rule_generator=true
+overwrite_original_rules=true
+FINAL="[]♻️ Auto"
