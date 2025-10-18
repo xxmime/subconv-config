@@ -42,7 +42,7 @@ custom_proxy_groups = [
     
     "Adobe`select`[]REJECT",
     ["Apple`select`[]US`[]JP`[]♻️ Auto","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png"],
-    ["Google`fallback`[]US`[]JP`[]♻️ Auto`http://www.gstatic.com/generate_204,300,,50","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png"],
+    ["Google`select`[]US`[]JP`[]♻️ Auto`http://www.gstatic.com/generate_204,300,,50","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png"],
     ["TelegramCIDR`select`[]US`[]JP`[]♻️ Auto","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png"],
 ]
 exclude_remarks = [
