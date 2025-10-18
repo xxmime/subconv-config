@@ -37,13 +37,13 @@ custom_proxy_groups = [
 
     "🚀 Manual`select`[]direct`.*",
     "Proxy`select`[]♻️ Auto`[]US`[]JP`[]SG",
-    "Fallback`fallback`[]US`[]JP`[]SG`[]♻️ Auto`🚀 Manual",
-    "MATCH`select`[]Fallback",
+    # "Fallback`fallback`[]US`[]JP`[]SG`[]♻️ Auto`🚀 Manual",
+    "MATCH`fallback`[]♻️ Auto`[]🚀 Manual",
     
     "Adobe`select`[]REJECT",
-    ["Apple`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png"],
-    ["Google`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png"],
-    ["TelegramCIDR`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png"],
+    ["Apple`select`[]US`[]JP`[]♻️ Auto","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png"],
+    ["Google`fallback`[]US`[]JP`[]♻️ Auto","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png"],
+    ["TelegramCIDR`select`[]US`[]JP`[]♻️ Auto","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png"],
 ]
 exclude_remarks = [
     "(中国)", "(Google搜二爷翻墙)"
