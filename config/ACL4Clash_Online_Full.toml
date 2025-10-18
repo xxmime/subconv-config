@@ -37,7 +37,8 @@ custom_proxy_groups = [
 
     "🚀 Manual`select`[]direct`.*",
     "Proxy`select`[]♻️ Auto`[]US`[]JP`[]SG",
-    "MATCH`select`[]♻️ Auto",
+    "Fallback`fallback`[]US`[]JP`[]SG`[]♻️ Auto`🚀 Manual",
+    "MATCH`select`[]Fallback",
     
     "Adobe`select`[]REJECT",
     ["Apple`select`[]US","https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png"],
