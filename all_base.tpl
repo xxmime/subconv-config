@@ -318,23 +318,9 @@ enhanced-mode-by-rule = true
             },
             {
                 "type": "local"
-            },
-            {
-                "tag": "fakeip",
-                "type": "fakeip",
-                "inet4_range": "198.18.0.0/15",
-                "inet6_range": "fc00::/18"
             }
         ],
-        "rules": [
-            {
-                "query_type": [
-                "A",
-                "AAAA"
-                ],
-                "server": "fakeip"
-            }
-        ],
+        "rules": [],
         "final": "dns-yandex",
         "disable_cache": true,
         "independent_cache": false,
