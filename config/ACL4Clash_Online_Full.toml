@@ -19,6 +19,9 @@ rulesets = [
     "CNCIDR, DIRECT, http, ipcidr, https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt, ./ruleset/cncidr.yaml, 86400",
     "LANCIDR, DIRECT, http, ipcidr, https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt, ./ruleset/lancidr.yaml, 84600",
     "TelegramCIDR, TelegramCIDR, http, ipcidr, https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt, ./ruleset/telegramcidr.yaml, 86400",
+
+    # custom ruleset
+    "Custom, 🚀 Manual, http, domain, https://www.xxlen.tk/public/custom.txt, ./ruleset/custom.txt, 86400"
 ]
 
 custom_proxy_groups = [
