@@ -317,7 +317,8 @@ enhanced-mode-by-rule = true
                 "server_port": 443
             },
             {
-                "type": "local"
+                "type": "local",
+                "tag": "dns-direct"
             }
         ],
         "rules": [],
